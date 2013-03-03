@@ -103,18 +103,18 @@
               <img src="{block:IndexPage}{PhotoURL-250}{/block:IndexPage}{block:PermalinkPage}{PhotoURL-500}{/block:PermalinkPage}" alt="{PhotoAlt}"/>
               {LinkCloseTag}
               {block:PermalinkPage}
-                {block:Caption}
-                  <div class="caption">
+                <div class="caption">
+                  {block:Caption}
                     {Caption}
-                    {block:ContentSource}
-                      <div class="meta">Source: <a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a></div>
-                    {/block:ContentSource}
-                    {block:NoteCount}
-                      <div class="meta"><a href="{Permalink}">{NoteCount}</a> Notes</div>
-                    {/block:NoteCount}
-                    {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
-                  </div>
-                {/block:Caption}
+                  {/block:Caption}
+                  {block:ContentSource}
+                    <div class="meta">Source: <a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a></div>
+                  {/block:ContentSource}
+                  {block:NoteCount}
+                    <div class="meta"><a href="{Permalink}">{NoteCount}</a> Notes</div>
+                  {/block:NoteCount}
+                  {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
+                </div>
               {/block:PermalinkPage}
             </div>
           {/block:Photo}
